@@ -8,6 +8,12 @@ Rails.application.routes.draw do
 
   root "posts#index"
 
+  resources :users, only: [:create, :show]
+  get "/signup", to: "users#new"
+  get "/login", to: "sessions#new"
+  post "/sessions", to: "sessions#create"
+  delete "/sessions", to: "sessions#destroy"
+
   resources :posts do
     resources :comments
   end
