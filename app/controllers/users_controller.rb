@@ -11,7 +11,7 @@ class UsersController < ApplicationController
             @user.save
             redirect_to @user
         else
-            redirect :new
+            redirect_to :new
         end
     end
 
