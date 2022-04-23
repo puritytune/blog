@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ruby on rails 로 만든 간단한 블로그 입니다. 
 
-Things you may want to cover:
 
-* Ruby version
+Todo
+* 랜딩페이지 제작
 
-* System dependencies
+* 로그인 사용자 댓글 삭제시 사용자 확인
 
-* Configuration
+* 비로그인 사용자 댓글 삭제용 비번 만들기
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* 글 삭제시 본인 작성 글만 삭제 가능하게 하기
