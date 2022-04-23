@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   resources :posts
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -7,5 +8,7 @@ Rails.application.routes.draw do
 
   root "posts#index"
 
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 end
