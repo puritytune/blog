@@ -1,12 +1,27 @@
 
-<h1>Hello</h1>
+<h1>최근 소식</h1>
 
-<ul>
+<ol class="list-group">
 <% @post.each do |post| %>
-<li>
-<%= link_to post.title, post %>
-</li>
+
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+  <a href="/posts/<%= post.id %>" style="text-decoration:none;color:black;">
+  <div class="ms-2 me-auto">
+      <div class="fw-bold"><%= post.title %>
+      <% if post.comments.count>0 %>
+      <span class="badge bg-primary rounded-pill"><%= post.comments.count %></span>  
+      <% end %>
+      
+      </div>
+      
+      <%= post.content %>
+    </div>
+    
+    </a>
+  </li>
 <% end %>
 </ul>
 
-<%= link_to "새 글 쓰기", new_post_path %>
+<% if logged_in? %>
+    <%= link_to "새 글 쓰기", new_post_path ,:class=>"btn btn-primary"%>
+<% end %>

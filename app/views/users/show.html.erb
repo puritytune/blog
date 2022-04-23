@@ -1,6 +1,7 @@
-<h1>Welcome to the page of <%= @user.username %></h2>
-
+<h1>사용자:<%= @user.username %></h2>
 
 <% if current_user == @user %>
-  <h3>This is my page!!!</h3>
+ 
+  <h3>로그인을 환영합니다. </h3>
+  <%= button_to "로그아웃", sessions_path, method: :delete , :class=>"btn btn-danger" %>
 <% end %>

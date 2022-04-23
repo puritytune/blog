@@ -1,10 +1,10 @@
 <%= form_with model: [ @post, @post.comments.build ] do |form| %>
   <p>
-    <%= form.label :name ,:class=>"form-label"%><br>
+    <%= form.label :name ,"작성자",:class=>"form-label"%><br>
     <%= form.text_field :name,:class=>"form-control" %>
   </p>
   <p>
-    <%= form.label :content,:class=>"form-label" %><br>
+    <%= form.label :content ,"내용" ,:class=>"form-label" %><br>
     <%= form.text_area :content,:class=>"form-control" %>
   </p>
   <p>
