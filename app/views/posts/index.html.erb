@@ -1,0 +1,11 @@
+<h1>Hello</h1>
+
+<ul>
+<% @post.each do |post| %>
+<li>
+<%= link_to post.title, post %>
+</li>
+<% end %>
+</ul>
+
+<%= link_to "새 글 쓰기", new_post_path %>
