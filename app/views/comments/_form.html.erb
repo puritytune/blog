@@ -1,0 +1,13 @@
+<%= form_with model: [ @post, @post.comments.build ] do |form| %>
+  <p>
+    <%= form.label :name ,:class=>"form-label"%><br>
+    <%= form.text_field :name,:class=>"form-control" %>
+  </p>
+  <p>
+    <%= form.label :content,:class=>"form-label" %><br>
+    <%= form.text_area :content,:class=>"form-control" %>
+  </p>
+  <p>
+    <%= form.submit "작성" %>
+  </p>
+<% end %>

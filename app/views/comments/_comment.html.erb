@@ -1,0 +1,16 @@
+  <div>
+    <p>
+      <strong>이름:</strong>
+      <%= comment.name %>
+    </p>
+    <p>
+      <strong>내용:</strong>
+      <%= comment.content %>
+    </p>
+    <p>
+      <%= link_to "삭제", [comment.post, comment], data: {
+    turbo_method: :delete,
+    turbo_confirm: "삭제 하시겠습니까?"
+} %>
+    </p>
+  </div>
